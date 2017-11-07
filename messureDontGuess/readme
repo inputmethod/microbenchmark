@@ -1,0 +1,11 @@
+ precondition: install maven and then create project:
+ $ sudo apt-get install maven
+ $ mvn archetype:generate -DinteractiveMode=false -DarchetypeGroupId=org.openjdk.jmh \
+      -DarchetypeArtifactId=jmh-java-benchmark-archetype -DarchetypeVersion=1.4.1 \
+              -DgroupId=org.agoncal.sample.jmh -DartifactId=logging -Dversion=1.0
+
+ run command: mvn clean install && java -jar target/benchmarks.jar
+ SA: http://www.hollischuang.com/archives/1072
+     http://www.importnew.com/12548.html
+     http://irfen.me/java-jmh-simple-microbenchmark/
+     https://stackoverflow.com/questions/504103/how-do-i-write-a-correct-micro-benchmark-in-java
